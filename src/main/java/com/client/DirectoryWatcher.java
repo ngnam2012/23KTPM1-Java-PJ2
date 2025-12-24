@@ -70,6 +70,9 @@ public class DirectoryWatcher implements Runnable {
             FileChangeEvents fileChangeEvents = new FileChangeEvents(
                     fullPath.toString(), changeType, clientId, watchDirectory.toString()
             );
+            if (onChange != null) {
+                onChange.accept(fileChangeEvents);
+            }
         }
     }
 

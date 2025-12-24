@@ -9,9 +9,9 @@ public class FileChangeEvents implements Serializable {
     private static final long serialVersionUID = 1L;
 
     public enum ChangeType {
-        CREATED("Tạo mới", "[+]"),
-        MODIFIED("Chỉnh sửa", "[~]"),
-        DELETED("Xóa", "[-]");
+        CREATED("Tạo mới", "[CREATE]"),
+        MODIFIED("Chỉnh sửa", "[MODIFY]"),
+        DELETED("Xóa", "[DELETE]");
 
         private final String displayName;
         private final String icon;
